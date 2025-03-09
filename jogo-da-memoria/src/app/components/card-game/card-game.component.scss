@@ -78,6 +78,13 @@ $cute-purple: #c7ceea;
           background-color: $cute-green;
         }
       }
+      :hover{
+        width: 105px;
+        height: 105px;
+        perspective: 1050px;
+        border-radius: 20px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
