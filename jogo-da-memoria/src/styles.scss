@@ -1,0 +1,95 @@
+@use 'sass:color';
+$cute-purple: #c7ceea;
+$cute-pink: #ff9aa2;
+
+html, body, .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=), auto;
+  background: linear-gradient(#C3B1E1, #FFC0CB);
+  flex-direction: column;
+}
+
+button {
+  margin: 15px;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-family: cursive;
+  color: white;
+  background-color: $cute-purple;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-image-source: none;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC") 14 0, pointer;
+  &:hover{
+    background-color: color.adjust($cute-pink, $red: 10);
+    font-size: 30px;
+  }
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  background-color: #C6C4C4FF;
+  color: white;
+  text-align: center;
+  padding: 2%;
+  font-family: cursive;
+  bottom: 0;
+  left: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a:hover {
+  color: #0077b5; /* Change to your preferred hover color */
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC") 14 0, pointer;
+}
+
+/* STAR EFFECT */
+
+.star {
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  animation: animate 4s linear forwards;
+}
+
+.star::before {
+  content: "\f005";
+  font-family: FontAwesome;
+  text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 50px #fff;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .star {
+    font-size: 8px;
+  }
+}
+

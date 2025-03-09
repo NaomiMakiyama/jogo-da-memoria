@@ -1,0 +1,33 @@
+@use 'sass:color';
+$cute-pink: #ff9aa2;
+$cute-dark-purple: #450AB1FF;
+$cute-purple:#673ab7;
+
+h1 {
+  color: $cute-purple;
+  text-align: center;
+  margin: 0px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  margin: 15px;
+}
+
+.dialog-header {
+  align-self: flex-end;
+  margin: 0pxx;
+  line-height: 1px;
+
+  .close-button {
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: $cute-dark-purple;
+    padding: 5px;
+    &:hover {
+      background-color: color.adjust($cute-pink, $red: 10);
+    }
+  }
+}

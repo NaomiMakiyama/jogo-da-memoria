@@ -1,0 +1,11 @@
+<div class="game-container">
+  <div class="grid" >
+    <div *ngFor="let card of cards; let i = index" class="card" [class.flipped]="card.flipped" [class.matched]="card.matched" (click)="flipCard(i)">
+      <div class="front">
+        <img [src]="card.image" alt="Card Image" />
+      </div>
+      <div class="back"></div>
+    </div>
+  </div>
+  <button (click)="resetGame()">Reiniciar</button>
+</div>
